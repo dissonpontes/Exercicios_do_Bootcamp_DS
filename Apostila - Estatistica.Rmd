@@ -700,7 +700,7 @@ A biblioteca chama 'truncnorm'. Basta instalar com o comando abaixo **install.pa
 Uma vez instalada não há mais necessidade de instalar novamente. Basta carregar com o comando **library()**
 
 ```{r}
-install.packages('truncnorm')
+#install.packages('truncnorm')
 library(truncnorm)
 set.seed(100)
 ```
@@ -945,7 +945,7 @@ View(dados_anova)
 Podemos utilizar os recursos de visualização da biblioteca **ggplot2** para visualizar a distribuição dos gastos nas populações
 
 ```{r}
-install.packages("ggplot2")
+#install.packages("ggplot2")
 library(ggplot2)
 ggplot(data = dados_anova, aes(x = Gastos, fill = Estado_Civil)) +
  geom_density(alpha=0.4)+
@@ -1119,8 +1119,8 @@ Armazena valores da matriz de confusao (sinceramente não sei qual é o erro nes
 
 ```{r}
 vp <- confusao[1,1];vp
-fn <- confusao[2,1];fn
-vn <- confusao[2,2];vn
+#fn <- confusao[2,1];fn
+#vn <- confusao[2,2];vn
 fp <- confusao[1,2];fp
 ```
 
@@ -1143,9 +1143,9 @@ especificidade[i] <- vn / (vn + fp)
 
 ```
 
-Teoricamente, deveria mostrar o gráfico
+Teoricamente, deveria mostrar o gráfico, mas não funciona
 
-```{r}
+```
 plot(y = sensitividade[1:698] , x = limiares[1:698], type="l", col="red", ylab =
 'Sensitividade e Especificidade', xlab= 'Pontos de Corte')
 grid()
