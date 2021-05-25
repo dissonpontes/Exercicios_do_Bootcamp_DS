@@ -4,6 +4,47 @@ subtitle: "Escrito por Máiron César Simões Chaves. Adaptado por Anderson Pont
 output: github_document
 ---
 
+# Índice
+1.[Capítulo 01 - Análise Exploratória de Dados com o R](# Capítulo 01 - Análise Exploratória de Dados com o R)
+2.[Capítulo 02 - Distribuições de Probabilidade](# Capítulo 02 - Distribuições de Probabilidade)
+  2.1 [Distribuição Binomial](## DISTRIBUIÇÃO BINOMIAL)
+  2.2 [Distribuição Geométrica](## DISTRIBUIÇÃO GEOMÉTRICA)
+  2.3 [Distribuição Binomial Negativa](## DISTRIBUIÇÃO BINOMIAL NEGATIVA)
+  2.4 [Distribuição Poisson](## DISTRIBUIÇÃO POISSON)
+  2.5 [Distribuição Normal](## DITRIBUIÇÃO NORMAL)
+  2.6 [Distribuição Normal Padrão](## DISTRIBUIÇÃO NORMAL PADRÃO)
+  2.7 [Distribuição F](## DISTRIBUIÇÃO F)
+  2.8 [Distribuição T](## DISTRIBUIÇÃO T)
+  2.9 [Distribuição Qui-Quadrado](## DISTRIBUIÇÃO QUI-QUADRADO)
+3.[Capítulo 03 - Intervalos de confiança](# Capítulo 03 - Intervalos de confiança)
+  3.1 [Intervalo de confiança para média amostral pela distribuição Normal Padrão](##  Intervalo de confiança para média amostral pela distribuição Normal Padrão)
+  3.2 [Intervalo de confiança para a média amostral pela distribuição t de Student](## Intervalo de confiança para a média amostral pela distribuição t de Student)
+  3.3 [Intervalo de confiança para a proporção](## Intervalo de confiança para a proporção)
+  3.4 [Intervalo de confiança para média via Bootstrap](## Intervalo de confiança para média via Bootstrap)
+4.[Capítulo 04 - Testes de Hipóteses](# Capítulo 04 - Testes de Hipóteses)
+  4.1 [Avaliando a normalidade de uma variável aleatória](## Avaliando a normalidade de uma variável aleatória)
+  4.2 [Teste t para diferença de médias (duas amostras independentes)](## Teste t para diferença de médias (duas amostras independentes))
+  4.3 [Teste t para diferença de médias (duas amostras dependentes)](## Teste t para diferença de médias (duas amostras dependentes))
+  4.4 [Teste Qui-Quadrado para associação entre variáveis categóricas](## Teste Qui-Quadrado para associação entre variáveis categóricas)
+  4.5 [ANOVA (Análise de Variância)](## ANOVA (Análise de Variância))
+5.[Capítulo 05 - Regressão Linear](## Capítulo 05 - Regressão Linear) 
+6. [Atividade Avaliativa do Módulo 01](# Atividade Avaliativa do Módulo 01)
+  6.1 [Pergunta 01](### Pergunta 01: Explore a variável resposta PREÇO e responda: Pelo histograma, você diria que a variável PREÇO segue uma distribuição normal?)
+  6.2 [Pergunta 02](### Pergunta 02: Explore a variável resposta, que é o Preço, e responda: Pelo boxplot do Preço, você consegue visualizar algum outlier?)
+  6.3 [Pergunta 03](### Pergunta 03: Explore a variável resposta, que é o Preço, e responda: Qual é o valor mediano do Preço e qual a sua interpretação CORRETA?)
+  6.4 [Pergunta 04](### Pergunta 04: Explore a relação entre as variáveis Preço e Quadrimestre, e responda: Através do boxplot, como o Preço se comporta em relação a cada Quadrimestre?)
+  6.5 [Pergunta 05](### Pergunta 05: Explore a relação entre as variáveis Preço e Quadrimestre, e responda: Através de uma ANOVA, existe diferença significativa entre o Preço médio de pelo menos um Quadrimestre em relação aos outros? Como chegou a essa conclusão? Adote 95% de confiança na sua interpretação.)
+  6.6 [Pergunta 06](### Pergunta 06: Explore a relação entre as variáveis Preço e Portas, e responda: Através de um teste t de Student para amostras independentes, existe diferença significativa entre o preço médio do aluguel do veículo com duas portas quando comparado com o preço médio do veículo de quatro portas? Adote 95% de confiança ao realizar na sua interpretação.)
+  6.7 [Pergunta 07](### Pergunta 07: Explore a relação entre as variáveis Preço e Quilometragem, e responda: Pelo gráfico de dispersão, você identifica que existe relação linear entre o Preço e a Quilometragem? Se sim, a relação é positiva ou negativa?)
+  6.8 [Pergunta 08](### Pergunta 08: Explore a relação entre as variáveis Preço e Quilometragem, e responda: Obtenha o valor do coeficiente de correlação linear de Pearson entre o Preço e a Quilometragem. Qual a interpretação CORRETA?)
+  6.9 [Pergunta 09](### Pergunta 09: Explore a relação entre as variáveis Preço e Quilometragem, e responda: Se tentarmos utilizar somente a Quilometragem para prever o valor do Preço, o quanto da variação do Preço a variável Quilometragem consegue explicar? Em outas palavras, interprete o R2 da regressão linear do Preço em função da Quilometragem.)
+  6.10 [Pergunta 10](### Pergunta 10: Explore a variável Quilometragem, e responda: Qual o valor do primeiro quartil e qual a sua interpretação CORRETA?)
+  6.11 [Pergunta 11](### Pergunta 11: Explore a variável Quilometragem, e responda: Qual o valor do terceiro quartil e qual a sua interpretação CORRETA?)
+  6.12 [Pergunta 12](### Pergunta 12: Explore a variável Quilometragem e responda: Qual é o valor do coeficiente de variação e qual a sua interpretação CORRETA?)
+  6.13 [Pergunta 13](### Pergunta 13: Explore a correlação entre o Dolar e o Preco, e responda: A correlação entre as duas variáveis é positiva ou negativa?)
+  6.14 [Pergunta 14](### Pergunta 14: Explore a correlação entre o Dolar e o Preco, e responda: Obtenha o coeficiente de correlação linear de Pearson entre o Dolar e o Preço. Qual a interpretação CORRETA?)
+  6.15 [Pergunta 15](### Pergunta 15: Explore a correlação entre o Dolar e o Preco, e responda: Se ajustarmos uma regressão linear entre o Dolar e o Preco, para tentar prever o Preço baseado no Dólar, seria possível?)
+
 # Capítulo 01 - Análise Exploratória de Dados com o R
 
 Criando o **dataframe** que possui os dados que serão explorados.
@@ -212,7 +253,7 @@ Exemplo: Uma loja recebe em média, 6 (𝝺) clientes por minuto. Qual a probabi
 dpois(x= 5,lambda = 6)
 ```
 
-#Onde:
+Onde:
 x é a quantidade a ser testada, lambda é a taxa média de ocorrêcia do evento em um determinado período de intervalo de tempo ou espaço.
 
 Podemos utilizar a mesma funcao para obter a probabilidade de entrar um cliente, dois clientes... quinze clientes

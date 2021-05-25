@@ -1,6 +1,76 @@
 Apostila IGTI - Análise Estatística de Dados
 ================
 
+# Índice
+
+1.[Capítulo 01 - Análise Exploratória de Dados com o
+R](#%20Capítulo%2001%20-%20Análise%20Exploratória%20de%20Dados%20com%20o%20R)
+2.[Capítulo 02 - Distribuições de
+Probabilidade](#%20Capítulo%2002%20-%20Distribuições%20de%20Probabilidade)
+2.1 [Distribuição Binomial](##%20DISTRIBUIÇÃO%20BINOMIAL) 2.2
+[Distribuição Geométrica](##%20DISTRIBUIÇÃO%20GEOMÉTRICA) 2.3
+[Distribuição Binomial
+Negativa](##%20DISTRIBUIÇÃO%20BINOMIAL%20NEGATIVA) 2.4 [Distribuição
+Poisson](##%20DISTRIBUIÇÃO%20POISSON) 2.5 [Distribuição
+Normal](##%20DITRIBUIÇÃO%20NORMAL) 2.6 [Distribuição Normal
+Padrão](##%20DISTRIBUIÇÃO%20NORMAL%20PADRÃO) 2.7 [Distribuição
+F](##%20DISTRIBUIÇÃO%20F) 2.8 [Distribuição T](##%20DISTRIBUIÇÃO%20T)
+2.9 [Distribuição Qui-Quadrado](##%20DISTRIBUIÇÃO%20QUI-QUADRADO)
+3.[Capítulo 03 - Intervalos de
+confiança](#%20Capítulo%2003%20-%20Intervalos%20de%20confiança) 3.1
+[Intervalo de confiança para média amostral pela distribuição Normal
+Padrão](##%20Intervalo%20de%20confiança%20para%20média%20amostral%20pela%20distribuição%20Normal%20Padrão)
+3.2 [Intervalo de confiança para a média amostral pela distribuição t de
+Student](##%20Intervalo%20de%20confiança%20para%20a%20média%20amostral%20pela%20distribuição%20t%20de%20Student)
+3.3 [Intervalo de confiança para a
+proporção](##%20Intervalo%20de%20confiança%20para%20a%20proporção) 3.4
+[Intervalo de confiança para média via
+Bootstrap](##%20Intervalo%20de%20confiança%20para%20média%20via%20Bootstrap)
+4.[Capítulo 04 - Testes de
+Hipóteses](#%20Capítulo%2004%20-%20Testes%20de%20Hipóteses) 4.1
+[Avaliando a normalidade de uma variável
+aleatória](##%20Avaliando%20a%20normalidade%20de%20uma%20variável%20aleatória)
+4.2 [Teste t para diferença de médias (duas amostras
+independentes)](##%20Teste%20t%20para%20diferença%20de%20médias%20(duas%20amostras%20independentes))
+4.3 [Teste t para diferença de médias (duas amostras
+dependentes)](##%20Teste%20t%20para%20diferença%20de%20médias%20(duas%20amostras%20dependentes))
+4.4 [Teste Qui-Quadrado para associação entre variáveis
+categóricas](##%20Teste%20Qui-Quadrado%20para%20associação%20entre%20variáveis%20categóricas)
+4.5 [ANOVA (Análise de
+Variância)](##%20ANOVA%20(Análise%20de%20Variância)) 5.[Capítulo 05 -
+Regressão Linear](##%20Capítulo%2005%20-%20Regressão%20Linear) 6.
+[Atividade Avaliativa do Módulo
+01](#%20Atividade%20Avaliativa%20do%20Módulo%2001) 6.1 [Pergunta
+01](###%20Pergunta%2001:%20Explore%20a%20variável%20resposta%20PREÇO%20e%20responda:%20Pelo%20histograma,%20você%20diria%20que%20a%20variável%20PREÇO%20segue%20uma%20distribuição%20normal?)
+6.2 [Pergunta
+02](###%20Pergunta%2002:%20Explore%20a%20variável%20resposta,%20que%20é%20o%20Preço,%20e%20responda:%20Pelo%20boxplot%20do%20Preço,%20você%20consegue%20visualizar%20algum%20outlier?)
+6.3 [Pergunta
+03](###%20Pergunta%2003:%20Explore%20a%20variável%20resposta,%20que%20é%20o%20Preço,%20e%20responda:%20Qual%20é%20o%20valor%20mediano%20do%20Preço%20e%20qual%20a%20sua%20interpretação%20CORRETA?)
+6.4 [Pergunta
+04](###%20Pergunta%2004:%20Explore%20a%20relação%20entre%20as%20variáveis%20Preço%20e%20Quadrimestre,%20e%20responda:%20Através%20do%20boxplot,%20como%20o%20Preço%20se%20comporta%20em%20relação%20a%20cada%20Quadrimestre?)
+6.5 [Pergunta
+05](###%20Pergunta%2005:%20Explore%20a%20relação%20entre%20as%20variáveis%20Preço%20e%20Quadrimestre,%20e%20responda:%20Através%20de%20uma%20ANOVA,%20existe%20diferença%20significativa%20entre%20o%20Preço%20médio%20de%20pelo%20menos%20um%20Quadrimestre%20em%20relação%20aos%20outros?%20Como%20chegou%20a%20essa%20conclusão?%20Adote%2095%%20de%20confiança%20na%20sua%20interpretação.)
+6.6 [Pergunta
+06](###%20Pergunta%2006:%20Explore%20a%20relação%20entre%20as%20variáveis%20Preço%20e%20Portas,%20e%20responda:%20Através%20de%20um%20teste%20t%20de%20Student%20para%20amostras%20independentes,%20existe%20diferença%20significativa%20entre%20o%20preço%20médio%20do%20aluguel%20do%20veículo%20com%20duas%20portas%20quando%20comparado%20com%20o%20preço%20médio%20do%20veículo%20de%20quatro%20portas?%20Adote%2095%%20de%20confiança%20ao%20realizar%20na%20sua%20interpretação.)
+6.7 [Pergunta
+07](###%20Pergunta%2007:%20Explore%20a%20relação%20entre%20as%20variáveis%20Preço%20e%20Quilometragem,%20e%20responda:%20Pelo%20gráfico%20de%20dispersão,%20você%20identifica%20que%20existe%20relação%20linear%20entre%20o%20Preço%20e%20a%20Quilometragem?%20Se%20sim,%20a%20relação%20é%20positiva%20ou%20negativa?)
+6.8 [Pergunta
+08](###%20Pergunta%2008:%20Explore%20a%20relação%20entre%20as%20variáveis%20Preço%20e%20Quilometragem,%20e%20responda:%20Obtenha%20o%20valor%20do%20coeficiente%20de%20correlação%20linear%20de%20Pearson%20entre%20o%20Preço%20e%20a%20Quilometragem.%20Qual%20a%20interpretação%20CORRETA?)
+6.9 [Pergunta
+09](###%20Pergunta%2009:%20Explore%20a%20relação%20entre%20as%20variáveis%20Preço%20e%20Quilometragem,%20e%20responda:%20Se%20tentarmos%20utilizar%20somente%20a%20Quilometragem%20para%20prever%20o%20valor%20do%20Preço,%20o%20quanto%20da%20variação%20do%20Preço%20a%20variável%20Quilometragem%20consegue%20explicar?%20Em%20outas%20palavras,%20interprete%20o%20R2%20da%20regressão%20linear%20do%20Preço%20em%20função%20da%20Quilometragem.)
+6.10 [Pergunta
+10](###%20Pergunta%2010:%20Explore%20a%20variável%20Quilometragem,%20e%20responda:%20Qual%20o%20valor%20do%20primeiro%20quartil%20e%20qual%20a%20sua%20interpretação%20CORRETA?)
+6.11 [Pergunta
+11](###%20Pergunta%2011:%20Explore%20a%20variável%20Quilometragem,%20e%20responda:%20Qual%20o%20valor%20do%20terceiro%20quartil%20e%20qual%20a%20sua%20interpretação%20CORRETA?)
+6.12 [Pergunta
+12](###%20Pergunta%2012:%20Explore%20a%20variável%20Quilometragem%20e%20responda:%20Qual%20é%20o%20valor%20do%20coeficiente%20de%20variação%20e%20qual%20a%20sua%20interpretação%20CORRETA?)
+6.13 [Pergunta
+13](###%20Pergunta%2013:%20Explore%20a%20correlação%20entre%20o%20Dolar%20e%20o%20Preco,%20e%20responda:%20A%20correlação%20entre%20as%20duas%20variáveis%20é%20positiva%20ou%20negativa?)
+6.14 [Pergunta
+14](###%20Pergunta%2014:%20Explore%20a%20correlação%20entre%20o%20Dolar%20e%20o%20Preco,%20e%20responda:%20Obtenha%20o%20coeficiente%20de%20correlação%20linear%20de%20Pearson%20entre%20o%20Dolar%20e%20o%20Preço.%20Qual%20a%20interpretação%20CORRETA?)
+6.15 [Pergunta
+15](###%20Pergunta%2015:%20Explore%20a%20correlação%20entre%20o%20Dolar%20e%20o%20Preco,%20e%20responda:%20Se%20ajustarmos%20uma%20regressão%20linear%20entre%20o%20Dolar%20e%20o%20Preco,%20para%20tentar%20prever%20o%20Preço%20baseado%20no%20Dólar,%20seria%20possível?)
+
 # Capítulo 01 - Análise Exploratória de Dados com o R
 
 Criando o **dataframe** que possui os dados que serão explorados.
@@ -305,9 +375,8 @@ dpois(x= 5,lambda = 6)
 
     ## [1] 0.1606231
 
-\#Onde: x é a quantidade a ser testada, lambda é a taxa média de
-ocorrêcia do evento em um determinado período de intervalo de tempo ou
-espaço.
+Onde: x é a quantidade a ser testada, lambda é a taxa média de ocorrêcia
+do evento em um determinado período de intervalo de tempo ou espaço.
 
 Podemos utilizar a mesma funcao para obter a probabilidade de entrar um
 cliente, dois clientes… quinze clientes
@@ -597,7 +666,7 @@ IC <-t.test(va, conf.level = 0.95)
 IC$conf.int
 ```
 
-    ## [1] 26.60276 32.75529
+    ## [1] 27.02330 32.50328
     ## attr(,"conf.level")
     ## [1] 0.95
 
@@ -710,7 +779,7 @@ quantile(medias, probs = c(0.025,0.975))
 ```
 
     ##     2.5%    97.5% 
-    ## 2.815887 4.302400
+    ## 2.507188 3.953352
 
 Vamos realizar mais um experimento: Geraremos uma va com média = 30 e
 desvio padrão amostral =7.31 e n = 30
@@ -747,7 +816,7 @@ quantile( medias, probs = c(0.025,0.975))
 ```
 
     ##     2.5%    97.5% 
-    ## 23.68720 30.28116
+    ## 26.52833 32.98991
 
 Limites inferior e superior do intervalo via t de Student
 
@@ -756,7 +825,7 @@ IC<-t.test(va, conf.level = 0.95)
 IC$conf.int
 ```
 
-    ## [1] 24.0805 29.8084
+    ## [1] 26.94817 32.51941
     ## attr(,"conf.level")
     ## [1] 0.95
 
