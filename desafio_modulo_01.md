@@ -440,6 +440,22 @@ summary(regressao_linear)
     ## Multiple R-squared:  0.9477, Adjusted R-squared:  0.9437 
     ## F-statistic: 235.6 on 2 and 26 DF,  p-value: < 2.2e-16
 
+``` r
+hist(regressao_linear$residuals)
+```
+
+![](desafio_modulo_01_files/figure-gfm/unnamed-chunk-17-1.png)<!-- -->
+
+``` r
+shapiro.test(regressao_linear$residuals)
+```
+
+    ## 
+    ##  Shapiro-Wilk normality test
+    ## 
+    ## data:  regressao_linear$residuals
+    ## W = 0.96775, p-value = 0.5005
+
 ## Pergunta 13 - Ajuste uma Regressão linear do Consumo em função da Idade e Renda Mensal, e responda:
 
 Marque a alternativa com a interpretação CORRETA do coeficiente Beta da

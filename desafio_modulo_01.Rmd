@@ -265,6 +265,14 @@ regressao_linear <- lm(Consumo ~ Idade + Renda_Mensal, data = dados)
 summary(regressao_linear)
 ```
 
+```{r}
+hist(regressao_linear$residuals)
+```
+```{r}
+shapiro.test(regressao_linear$residuals)
+```
+
+
 ## Pergunta 13 - Ajuste uma Regressão linear do Consumo em função da Idade e Renda Mensal, e responda: 
 
 Marque a alternativa com a interpretação CORRETA do coeficiente Beta da variável Idade. 
