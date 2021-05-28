@@ -353,6 +353,12 @@ shapiro.test(regressao_linear$residuals)
     ## data:  regressao_linear$residuals
     ## W = 0.95467, p-value = 0.2415
 
+``` r
+hist(regressao_linear$residuals)
+```
+
+![](desafio_modulo_01_files/figure-gfm/unnamed-chunk-13-1.png)<!-- -->
+
 ## Pergunta 10 - Explore a variável Renda Mensal e responda:
 
 Qual o valor do primeiro quartil e qual a sua interpretação CORRETA?

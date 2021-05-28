@@ -218,6 +218,11 @@ Teste de normalidade para os residuos da regressao
 ```{r}
 shapiro.test(regressao_linear$residuals)
 ```
+```{r}
+hist(regressao_linear$residuals)
+```
+
+
 
 ## Pergunta 10 - Explore a variável Renda Mensal e responda: 
 
