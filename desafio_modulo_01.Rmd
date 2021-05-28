@@ -90,6 +90,7 @@ Boxplot do consumo:
 ```{r}
 boxplot(dados$Consumo)
 ```
+
 ## Pergunta 03 - Explore a variável resposta, que é o Consumo, e responda: 
 
 Qual é o valor do primeiro quartil e terceiro quartil? 
